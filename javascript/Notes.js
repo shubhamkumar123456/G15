@@ -11,11 +11,11 @@
 // Ways to Write Js --> internal , external
 
 // Topics --> 
-// Variable
-// Data types
-// String and its method
-// loops
-// Array and its method
+// Variable  --> done
+// Data types --> done
+// String and its method --> done
+// loops --> done
+// Array and its method --> done
 // Objects
 // functions
 // Callback function
@@ -225,14 +225,172 @@
 
 // loops --> for loop , while loop, do while loop
 
- let arr = ["hindi", "english", "maths", "art"];
- for(let i=0; i<arr.length; i++){
-    console.log(arr[i])
- }
-
- 
-
-
-
+//  let arr = ["hindi", "english", "maths", "art"];
+//  for(let i=0; i<arr.length; i++){
+//     console.log(arr[i])
+//  }
 
 // important array methods --> filter method , forEach , map method-->
+
+
+// *************************21-07-2026********************************
+// object methods -->
+//a) add or update or delete value in object -->
+
+    // let data = {
+    //     name:"one",
+    //     age:45
+    // }
+    // delete data.age;
+
+    // console.log(data)
+
+    // data.course  = "fullstack";
+    // data.age = 33;
+
+    // console.log(data)  //{name:"one", age:33 ,course:"fullstack"}
+
+//b) convert Object into string --> JSON.stringify() , JSON.parse()
+
+// let data = {
+//     name:"one",
+//     age:10,
+//     course:"fullstack"
+// }
+
+// let ans = JSON.stringify(data) // covert obj into string
+// console.log(ans)
+// console.log(typeof ans)
+// console.log(ans[0])
+
+
+// let ans2 = JSON.parse(ans);
+// console.log(ans2)
+
+
+// **************************
+
+// Function --> are reusable piece of code used to perform a specific task. a function only run when something invokes it (call it)
+
+// example of function -->
+// data recieved in function decleration is known as parameters 
+    // function sum(a , b , c ){  // function decleration
+    //     console.log("all is well")
+    //     console.log(a)
+    //     console.log(b)
+    //     console.log(c)
+    // }
+    // sum(10 , [4,5,6] , {name:"one"}) // function calling
+// data passed in function calling is known as arguments
+// let a = 10;
+// let b = 5;
+// console.log(a+b)
+// console.log(a*b)
+
+// let x = 1;
+// let y = 5;
+// console.log(x)
+// console.log(y)
+
+// let z = 88;
+// let r = 5;
+// console.log(z+r)
+// console.log(z*r)
+
+
+// Arrow function  --> 
+
+    // let a = 10;
+    // let b = "" // [] , {}
+
+    //function expression( when a function is used as a variable)
+    // let c = function(){ 
+    //     console.log("running")
+    // }
+    // c()
+
+    // in case of arrow function we do not use function key word we use arrows. introduced in ES6
+    // let print = ()=>{ // this is arrow function
+    //     console.log("i am arrow function")   
+    // }
+    // print()
+
+
+
+
+// Important*******
+// CallBack functions -->  functions that are passed into another function are known as CB function
+
+// function that take another function as an argument are known as HOF(higher order function)
+
+// function one(){
+//     console.log("i am one")
+// }
+
+// function two(a,b,c){
+//     console.log(a)
+//     console.log(b)
+//     c()
+// }
+
+// two(10, "hello" , one )
+// console.log(one)
+
+
+// Timer fuctions  --> setTimeout , setInterval
+// Syntax --> setInterval(cb , time(ms))
+
+// let count = 0
+// setInterval(function(){
+//     count++;
+//     // console.log("hello " + count)
+//     console.log(`hello ${count}`)
+// } , 3000)
+
+// let count = 0
+// setInterval(()=>{
+//     count++;
+//     // console.log("hello " + count)
+//     console.log(`hello ${count}`)
+// } , 3000)
+
+
+// filter method , map method , forEach method --> 
+// forEach --> used to traverse through an array
+// let arr = [10, 20, 30, 50 ,90];
+// arr.forEach((val, i)=>{
+//     console.log(val, i)
+// })
+
+// map method --> used to travers  through an array and can also return a new array;
+// let arr = [10, 20, 30, 50 ,90];
+// arr.map((val, i)=>{
+//     console.log(val, i)
+// })
+// let arr = [10, 20, 30, 50 ,90];
+
+// let ans = arr.map((val, i)=>{  //[11, 21, 31, 51, 91]
+//         return val+1
+// })
+// console.log(ans)
+
+
+// filter method --> can filter out any value 
+// let arr = [10, 20, 30, 50 ,90];
+// let ans = arr.filter((val)=> val!= 40);
+// console.log(ans)
+
+// find the name of products whose name is between 10 to 40 thousand including 10 and 20;
+// let arr = [
+//     {name:"iphone" , price:80000, rating:2}, //0
+//     {name:"samsung" , price:50000, rating:4}, //1
+//     {name:"x-box" , price:10000, rating:5}, //2
+//     {name:"realme" , price:35000, rating:3}, //3
+//     {name:"oppo" , price:25000, rating:2.5}, //4
+//     {name:"nokia" , price:45000, rating:4.5}, //5
+// ]
+
+
+
+
+
