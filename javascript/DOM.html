@@ -9,6 +9,13 @@
         .container{
             background-color: aqua;
         }
+
+        .box{
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
     </style>
 </head>
 <body>
@@ -34,6 +41,8 @@
             <p>this two</p>
             <p>this three</p>
     </div>
+
+    <div onclick="changeColor1()"  onmouseenter="changeColor2()"  onmouseout="changeColor3()"  class="box"></div>
 
     <script>
         //document object model (DOM) --> it is a tree like structure created by the browser. with the help of DOM , js gets all the power it needs to create dynamic web pages
@@ -96,19 +105,69 @@
             //     console.log(para)
 
     //4) Can create a new tag or element -->document.createElement('tagName')
-    let x = document.createElement('img');
-    x.src = "https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_640.jpg"
-    console.log(x)
-    x.style.width = "200px"
+    // let x = document.createElement('img');
+    // x.src = "https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_640.jpg"
+    // console.log(x)
+    // x.style.width = "200px"
 
-    //5) Insert tag inside html --> befor() , after() , append() , prepend()
+    // //5) Insert tag inside html --> before() , after() , append() , prepend()
         
-    // let data = document.querySelector('.ulList')
-    //             data.before(x)
+    // // let data = document.querySelector('.ulList')
+    // //             data.before(x)
 
-    let  y  = document.querySelector('.container')  //<div>  <div>
-        // y.append(x)  // insert as a last child inside any tag
-        y.prepend(x)  //insert as a first child inside any tag
+    // let  y  = document.querySelector('.container')  //<div>  <div>
+    //     // y.append(x)  // insert as a last child inside any tag
+    //     y.prepend(x)  //insert as a first child inside any tag
+
+
+
+    // 
+    // let bodyTag = document.querySelector('body')  //<body> <body>
+    //     for(let i = 1; i<=50; i++){
+    //         // console.log(i)
+    //         let a = document.createElement('p')
+    //         a.innerHTML = `THis is dummy text ${i}`
+    //         console.log(a)
+    //         bodyTag.append(a)
+    //     }
+    //     console.log(bodyTag)
+    
+    // let b = document.createElement('p')
+    // let c = document.createElement('p')
+
+
+
+    // Event --> events are actions given by the user and responded by the browser
+    // type --> inline , external events
+    // inline events --> write inside opening tag as a attribute example --> onclick , onmouseEnter, onMouseLeave .onmouseMove, onchange etc
+
+        let boxTag = document.querySelector('.box') // <div><div>
+
+    function changeColor1(){
+        // console.log("i am running")
+        boxTag.style.backgroundColor = "black"
+    }
+
+    function changeColor2(){
+        console.log("i am running 1")
+        boxTag.style.backgroundColor = "orange"
+    }
+
+    function changeColor3(){
+        // console.log("i am running 2")
+        boxTag.style.backgroundColor = "crimson"
+    }
+
+    document.addEventListener('mousemove', (event)=>{
+        console.log(event)
+        let xDirection = event.clientX
+        let yDirection = event.clientY
+
+        boxTag.style.position = "absolute";
+        boxTag.style.left = `${xDirection}px`
+        boxTag.style.top = `${yDirection}px`
+
+    })
     </script>
 </body>
 </html>
