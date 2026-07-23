@@ -381,6 +381,7 @@
 // console.log(ans)
 
 // find the name of products whose name is between 10 to 40 thousand including 10 and 20;
+
 // let arr = [
 //     {name:"iphone" , price:80000, rating:2}, //0
 //     {name:"samsung" , price:50000, rating:4}, //1
@@ -389,6 +390,8 @@
 //     {name:"oppo" , price:25000, rating:2.5}, //4
 //     {name:"nokia" , price:45000, rating:4.5}, //5
 // ]
+
+
 
 
 
